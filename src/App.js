@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import "./App.css";
+import { generateBoard } from "./helpers/generators";
+import Tile from "./components/Tile";
+import { matchExists } from "./helpers/utilities";
 
-function App() {
+const App = () => {
+  const [grid, setGrid] = useState(null);
+  useEffect(() => {
+    setGrid(generateBoard());
+  }, []);
+  useEffect(() => {
+    if (!grid) return;
+    matchExists(grid);
+  }, [grid]);
+  console.log(grid);
+  const board = [];
+  let row = [];
+  grid?.map((item, index) => {
+    row.push(<Tile color={item.color} index={item.index} />);
+    if ((index + 1) % 8 == 0) {
+      board.push(row);
+      row = [];
+    }
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <div className="container">
+        <div className="grid">
+          {board.map((row, index) => (
+            <div className="row">{row}</div>
+          ))}
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
