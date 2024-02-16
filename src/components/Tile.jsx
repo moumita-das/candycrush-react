@@ -1,11 +1,21 @@
 import React from "react";
 
-const Tile = ({ color, index }) => {
+const Tile = ({ color, index, updateStartDragIndex, updateEndDragIndex }) => {
   return (
     <div
       className={`tile ${color}`}
       key={index}
       index={index}
+      draggable
+      onDragStart={() => {
+        updateStartDragIndex(index);
+      }}
+      onDrop={() => {
+        updateEndDragIndex(index);
+      }}
+      onDragOver={(e) => {
+        e.preventDefault();
+      }}
       style={
         {
           // ...(boxesToMoveDown > 0

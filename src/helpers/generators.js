@@ -5,16 +5,16 @@ export const getRangeOfConsecutiveNumbers = (start, stop) =>
 
 export const generateBoard = () => {
   const randomisedColorArray = [];
-  for (let i = 0; i <= 64; i++) {
+  for (let i = 0; i < 64; i++) {
     randomisedColorArray.push({
       color: baseColors[Math.floor(Math.random() * 6)],
       index: i + 1,
     });
   }
-  //   return randomisedColorArray;
+  // return randomisedColorArray;
   return [
     {
-      color: "blue",
+      color: "yellow",
       index: 1,
     },
     {
@@ -22,11 +22,11 @@ export const generateBoard = () => {
       index: 2,
     },
     {
-      color: "orange",
+      color: "yellow",
       index: 3,
     },
     {
-      color: "orange",
+      color: "blue",
       index: 4,
     },
     {
@@ -34,15 +34,15 @@ export const generateBoard = () => {
       index: 5,
     },
     {
-      color: "blue",
+      color: "red",
       index: 6,
     },
     {
-      color: "red",
+      color: "purple",
       index: 7,
     },
     {
-      color: "green",
+      color: "yellow",
       index: 8,
     },
     {
@@ -50,7 +50,7 @@ export const generateBoard = () => {
       index: 9,
     },
     {
-      color: "purple",
+      color: "red",
       index: 10,
     },
     {
@@ -58,39 +58,39 @@ export const generateBoard = () => {
       index: 11,
     },
     {
-      color: "green",
+      color: "purple",
       index: 12,
     },
     {
-      color: "yellow",
+      color: "green",
       index: 13,
     },
     {
-      color: "red",
+      color: "orange",
       index: 14,
     },
     {
-      color: "red",
+      color: "yellow",
       index: 15,
     },
     {
-      color: "green",
+      color: "red",
       index: 16,
     },
     {
-      color: "green",
+      color: "yellow",
       index: 17,
     },
     {
-      color: "purple",
+      color: "red",
       index: 18,
     },
     {
-      color: "purple",
+      color: "red",
       index: 19,
     },
     {
-      color: "yellow",
+      color: "orange",
       index: 20,
     },
     {
@@ -98,19 +98,19 @@ export const generateBoard = () => {
       index: 21,
     },
     {
-      color: "purple",
+      color: "orange",
       index: 22,
     },
     {
-      color: "green",
+      color: "red",
       index: 23,
     },
     {
-      color: "yellow",
+      color: "blue",
       index: 24,
     },
     {
-      color: "blue",
+      color: "orange",
       index: 25,
     },
     {
@@ -122,99 +122,99 @@ export const generateBoard = () => {
       index: 27,
     },
     {
-      color: "red",
+      color: "green",
       index: 28,
     },
     {
-      color: "blue",
+      color: "green",
       index: 29,
     },
     {
-      color: "red",
+      color: "purple",
       index: 30,
     },
     {
-      color: "green",
+      color: "purple",
       index: 31,
     },
     {
-      color: "green",
+      color: "orange",
       index: 32,
     },
     {
-      color: "purple",
+      color: "red",
       index: 33,
     },
     {
-      color: "purple",
+      color: "yellow",
       index: 34,
     },
     {
-      color: "purple",
+      color: "orange",
       index: 35,
     },
     {
-      color: "blue",
+      color: "red",
       index: 36,
     },
     {
-      color: "orange",
+      color: "green",
       index: 37,
     },
     {
-      color: "green",
+      color: "yellow",
       index: 38,
     },
     {
-      color: "yellow",
+      color: "orange",
       index: 39,
     },
     {
-      color: "yellow",
+      color: "red",
       index: 40,
     },
     {
-      color: "purple",
+      color: "blue",
       index: 41,
     },
     {
-      color: "green",
+      color: "purple",
       index: 42,
     },
     {
-      color: "purple",
+      color: "green",
       index: 43,
     },
     {
-      color: "green",
+      color: "blue",
       index: 44,
     },
     {
-      color: "blue",
+      color: "green",
       index: 45,
     },
     {
-      color: "red",
+      color: "yellow",
       index: 46,
     },
     {
-      color: "red",
+      color: "orange",
       index: 47,
     },
     {
-      color: "orange",
+      color: "red",
       index: 48,
     },
     {
-      color: "purple",
+      color: "yellow",
       index: 49,
     },
     {
-      color: "blue",
+      color: "green",
       index: 50,
     },
     {
-      color: "blue",
+      color: "red",
       index: 51,
     },
     {
@@ -222,39 +222,39 @@ export const generateBoard = () => {
       index: 52,
     },
     {
-      color: "orange",
+      color: "green",
       index: 53,
     },
     {
-      color: "red",
+      color: "purple",
       index: 54,
     },
     {
-      color: "green",
+      color: "purple",
       index: 55,
     },
     {
-      color: "purple",
+      color: "orange",
       index: 56,
     },
     {
-      color: "orange",
+      color: "yellow",
       index: 57,
     },
     {
-      color: "orange",
+      color: "red",
       index: 58,
     },
     {
-      color: "orange",
+      color: "blue",
       index: 59,
     },
     {
-      color: "yellow",
+      color: "blue",
       index: 60,
     },
     {
-      color: "red",
+      color: "orange",
       index: 61,
     },
     {
@@ -262,16 +262,12 @@ export const generateBoard = () => {
       index: 62,
     },
     {
-      color: "red",
+      color: "yellow",
       index: 63,
     },
     {
-      color: "red",
+      color: "blue",
       index: 64,
-    },
-    {
-      color: "orange",
-      index: 65,
     },
   ];
 };
